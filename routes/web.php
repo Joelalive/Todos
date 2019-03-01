@@ -11,6 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@home');
+
+Route::get('/todos', 'TodosController@index');
+
+Route::post('/create/todo', 'TodosController@store');
+
+Route::get('/todos/delete/{todo}', 'TodosController@delete');
+
+Route::get('/todos/find/{todo}', 'TodosController@find');
+
+Route::patch('/todo/update/{todo}', 'TodosController@update');
+
+Route::get('/todo/completed/{todo}', 'TodosController@completed');
+
+
+
+
+
+
