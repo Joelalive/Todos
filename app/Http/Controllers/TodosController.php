@@ -47,6 +47,8 @@ class TodosController extends Controller
  
          $todos = Todo::create($attributes);
   
+         flash('New Todo has been created !');
+
          return redirect('/todos');
 
     }
