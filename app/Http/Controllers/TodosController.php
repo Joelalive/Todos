@@ -47,7 +47,7 @@ class TodosController extends Controller
  
          $todos = Todo::create($attributes);
   
-         flash('New Todo has been created !');
+         flash('success', 'New Todo has been created !');
 
          return redirect('/todos');
 
@@ -118,6 +118,8 @@ class TodosController extends Controller
     {
 
         $todo->delete();
+
+        flash('danger', 'Todo has been deleted');
 
         return back();
     }

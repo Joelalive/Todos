@@ -4,13 +4,10 @@
 
                  @include('errors')
 
-                 @if(session('message'))
-                 <div class="container alert alert-success"  role="alert">
-                    <ul>
-                    <li>{{ session('message') }}</li>
-                    </ul>
-                </div>
-                 @endif
+                 @include('flash')
+
+                
+
                 <div class="row">
                     <div class="col-lg-12 col-lg-offset-3">
                     <form action="/create/todo" method="POST">
